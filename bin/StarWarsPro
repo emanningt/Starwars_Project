@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require './lib/StarWars_Project'
+
+puts "Want to find out more about starwars? Well you're in the right place!"
+
+#this is incapsolation
+StarWarsProject::CLI.new.intro
