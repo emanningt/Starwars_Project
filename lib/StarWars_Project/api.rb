@@ -2,10 +2,10 @@ class StarWarsProject::API
 
 
   def self.films_in_starwars
-    film = RestClient.get("https://swapi.co/api/films/")
-    @film = JSON.parse(film)
-    @film.each do |film|
-      #iterate though fils to get attributes
+    responce = RestClient.get("https://swapi.co/api/films/")
+    films = JSON.parse(responce)
+    films.each do |film|
+      #instence though films to get attributes
       #make new film instensse though attributes
     end
   end
