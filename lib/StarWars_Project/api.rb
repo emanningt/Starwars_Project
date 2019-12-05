@@ -9,16 +9,18 @@ class StarWarsProject::API
     films.each do |film|
       #binding.pry
       title = film["title"]
-      opening_crwal = film["opening_crwal"]
+      opening_crawl = film["opening_crawl"]
       director = film["director"]
+      release_date = film["release_date"]
+      #binding.pry
 
-      #go get other atribues (opening_crwal, director, release_date)
       #instence though film to get attributes
-      #make new film instensse though attributes
+      #make new film instence though attributes
       StarWarsProject::Movie.new(title)
 
     end
   end
+
 
 
 
