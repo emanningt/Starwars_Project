@@ -5,6 +5,7 @@ class StarWarsProject::API
     responce = RestClient.get("https://swapi.co/api/films/")
     films = JSON.parse(responce)
     films.each do |film|
+      binding.pry
       #instence though films to get attributes
       #make new film instensse though attributes
     end
