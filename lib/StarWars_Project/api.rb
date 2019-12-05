@@ -2,14 +2,24 @@ class StarWarsProject::API
 
 
   def self.get_films
+    #access key though hash["key"]
     responce = RestClient.get("https://swapi.co/api/films/")
-    films = JSON.parse(responce)
+    parsed_response= JSON.parse(responce)
+    films = parsed_response["results"]
     films.each do |film|
-      binding.pry
-      #instence though films to get attributes
+      #binding.pry
+      title = film["title"]
+      opening_crwal = film["opening_crwal"]
+      director = film["director"]
+
+      #go get other atribues (opening_crwal, director, release_date)
+      #instence though film to get attributes
       #make new film instensse though attributes
+      StarWarsProject::Movie.new(title)
+
     end
   end
+
 
 
 end
