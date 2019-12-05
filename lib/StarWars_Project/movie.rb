@@ -1,0 +1,3 @@
+class StarWarsProject::Movie
+
+end 
