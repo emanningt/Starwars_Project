@@ -4,10 +4,22 @@ class StarWarsProject::CLI
 
   def intro
     StarWarsProject::API.get_films
+    movies = StarWarsProject::Movie.all
+    binding.pry
+
     menu
     ending
   end
 
+  def list
+
+  end
+
+  def details
+
+  end
+# add a lits method for move.all
+#add detial method to show the details
   def menu
     input = nil
     while input != "exit"
@@ -27,27 +39,6 @@ class StarWarsProject::CLI
             end
             puts "when you done reading just go back."
           end
-
-
-      when "Planets"
-        puts "you want to know more about Planets? Cool lets do it!"
-        #StarWarsProject::API.planets_in_starwars
-
-      when "Films"
-        puts "you want to know more about Films? Cool lets do it!"
-        #StarWarsProject::API.films_in_starwars
-
-      when "Species"
-        puts "you want to know more about Species? Cool lets do it!"
-        #StarWarsProject::API.species_in_starwars
-
-      when "Vehicles"
-        puts " Oh you wanto to know more about vehicles well here you go!"
-        #StarWarsProject::API.vehicles_in_starwars
-
-      when "Starships"
-        puts "Cool Starships! You must me well educated to want to know more about them!"
-        #StarWarsProject::API.starships_in_starwars
 
       end
     end
