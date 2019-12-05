@@ -1,7 +1,7 @@
 class StarWarsProject::API
 
 
-  def self.films_in_starwars
+  def self.get_films
     responce = RestClient.get("https://swapi.co/api/films/")
     films = JSON.parse(responce)
     films.each do |film|
