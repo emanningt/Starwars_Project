@@ -17,7 +17,7 @@ class StarWarsProject::API
       #instence though film to get attributes
       #make new film instence though attributes
       StarWarsProject::Movie.new(title, opening_crawl, director, release_date)
-      binding.pry
+      
 
     end
   end
