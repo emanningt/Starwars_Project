@@ -3,10 +3,7 @@
 class StarWarsProject::CLI
 
   def intro
-    puts "Hello! What is your name?"
-    name = gets.chomp()
-    puts ("Hello " + name + ", are you ready to learn more about starwars?" )
-    puts "Well you're in the right place thats for sure."
+    welcoming
     StarWarsProject::API.character_list
     #binding.pry
     menu
@@ -28,6 +25,13 @@ class StarWarsProject::CLI
 
   def ending
     puts "May the force be with you!"
+  end
+
+  def welcoming
+    puts "Hello! What is your name?"
+    name = gets.chomp()
+    puts ("Hello " + name + ", are you ready to learn more about starwars?" )
+    puts "Well you're in the right place thats for that!"
   end
 
 end
