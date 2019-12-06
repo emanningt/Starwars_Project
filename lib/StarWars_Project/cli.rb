@@ -2,17 +2,9 @@
 
 class StarWarsProject::CLI
 
-
-
-
+  def intro
+  ending
   end
-
-  def details
-
-  end
-# add a lits method for move.all
-#add detial method to show the details
-
 
 
   def ending
