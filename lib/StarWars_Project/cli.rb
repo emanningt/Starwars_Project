@@ -23,8 +23,8 @@ class StarWarsProject::CLI
         char_input = StarWarsProject::Character.find(num)
         character_details(char_input)
         puts "would you like to see informatoin fror another character? yes/no"
-        anser = gets.strip.downcase
-        if anser == "yes" || anser == "y"
+        answer = gets.strip.downcase
+        if answer == "yes" || answer == "y"
           menu
         else
         ending
@@ -32,6 +32,7 @@ class StarWarsProject::CLI
       puts " I dont understand that selecction"
       puts " please select a character bumber, or typed exit to leave the program."
       menu
+    end
       #binding.pry
     end
   end
@@ -54,4 +55,5 @@ class StarWarsProject::CLI
     puts "Well you're in the right place thats for that!"
   end
 
+  
 end
