@@ -19,7 +19,7 @@ class StarWarsProject::CLI
       ending
     else
       num = input.to_i
-      if nim != 0
+      if num != 0
         char_input = StarWarsProject::Character.find(num)
         character_details(char_input)
         puts "would you like to see informatoin fror another character? yes/no"
@@ -55,5 +55,5 @@ class StarWarsProject::CLI
     puts "Well you're in the right place thats for that!"
   end
 
-  
+
 end
