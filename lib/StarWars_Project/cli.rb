@@ -12,8 +12,12 @@ class StarWarsProject::CLI
 
   def menu
     input = nil
-    puts "Characters List:"
+    puts "-------------------------------------------"
+    puts "Characters List: Chose by typing the numer"
+    puts "-------------------------------------------"
     list_of_characters
+    puts "-------------------------------------------"
+    puts "Type exit when your done."
     input = gets.strip.downcase
     if input == "exit"
       ending
