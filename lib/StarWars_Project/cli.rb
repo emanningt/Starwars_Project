@@ -15,6 +15,16 @@ class StarWarsProject::CLI
 
     puts "Characters:"
     list_of_characters
+    puts " Type the Character you want to know more about."
+    puts " Oh and dont forget to type exit at any point to end the program"
+
+    input = gets.strip
+    if input == "exit"
+      ending
+    else
+
+
+
   end
 
   def list_of_characters
