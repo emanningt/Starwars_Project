@@ -20,6 +20,27 @@ class StarWarsProject::Characters
     @birth_year = birth_year
     @@all << self
   end
+#binding.pry
 
+  def self.all
+    @@all
+  end
 
-end 
+  def gender
+    @gender
+  end
+
+  def homeworld
+    @homeworld
+  end
+
+  def birth_year
+    @birth_year
+  end
+
+  def self.find(char)
+    self.all[char-1]
+  end
+
+#binding.pry
+end
