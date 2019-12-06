@@ -12,24 +12,22 @@ class StarWarsProject::CLI
 
   def menu
     input = nil
+      while input != "exit"
+        puts "Characters:"
+        list_of_characters
+        puts " Type the Character you want to know more about."
+        puts " Oh and dont forget to type exit at any point to end the program"
+        input = gets.strip
+        case input
+        when "Luke Skywalker"
 
-    puts "Characters:"
-    list_of_characters
-    puts " Type the Character you want to know more about."
-    puts " Oh and dont forget to type exit at any point to end the program"
-
-    input = gets.strip
-    if input == "exit"
-      ending
-    else
-
-
-
+        end
+      end
   end
 
   def list_of_characters
-    StarWarsProject::characters.all.each do |char, index|
-      puts "#{char} #{index}"
+    StarWarsProject::Characters.all.each.with_index(1) do |char, index|
+      puts "#{index}. #{char.character_name}"
     end
   end
 

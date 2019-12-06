@@ -1,6 +1,7 @@
 class StarWarsProject::Characters
 
-  attr_accessor :character_hash, :characters
+
+  attr_accessor :character_name, :films
 
   @@all = []
 
