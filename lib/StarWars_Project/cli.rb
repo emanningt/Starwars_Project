@@ -27,9 +27,12 @@ class StarWarsProject::CLI
         if answer == "yes" || answer == "y"
           menu
         else
+        puts "------------------------------------------"
+        puts "Well I hope you learnd a thing or two ;D"
         ending
+        puts "------------------------------------------"
       end
-      #add ending message 
+      #add ending message
     end
       #binding.pry
     end
