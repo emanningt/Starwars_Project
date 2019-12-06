@@ -7,7 +7,7 @@ class StarWarsProject::CLI
     StarWarsProject::API.character_list
     #binding.pry
     menu
-  ending
+
   end
 
   def menu
@@ -20,18 +20,16 @@ class StarWarsProject::CLI
     else
       num = input.to_i
       if num != 0
-        char_input = StarWarsProject::Character.find(num)
+        char_input = StarWarsProject::Characters.find(num)
         character_details(char_input)
-        puts "would you like to see informatoin fror another character? yes/no"
+        puts "would you like to see informatoin fror another character?"
         answer = gets.strip.downcase
         if answer == "yes" || answer == "y"
           menu
         else
         ending
       end
-      puts " I dont understand that selecction"
-      puts " please select a character bumber, or typed exit to leave the program."
-      menu
+      #add ending message 
     end
       #binding.pry
     end
@@ -53,6 +51,16 @@ class StarWarsProject::CLI
     name = gets.chomp()
     puts ("Hello " + name + ", are you ready to learn more about starwars?" )
     puts "Well you're in the right place thats for that!"
+  end
+
+  def character_details(char_input)
+    puts "#{char_input.character_name}"
+    puts "birth_year: #{char_input.birth_year}"
+    puts "homeworld: #{char_input.homeworld}"
+    puts "gender: #{char_input.gender}"
+    puts "height: #{char_input.height}"
+    puts "hair color: #{char_input.hair_color}"
+    puts "skin_color: #{char_input.skin_color}"
   end
 
 
