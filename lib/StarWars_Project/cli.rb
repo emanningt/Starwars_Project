@@ -13,11 +13,11 @@ class StarWarsProject::CLI
   def menu
     input = nil
     puts "-------------------------------------------"
-    puts "Characters List: Chose by typing the numer"
+    puts "Characters List: Choose by typing the number"
     puts "-------------------------------------------"
     list_of_characters
     puts "-------------------------------------------"
-    puts "Type exit when your done."
+    puts "Type exit when you are done."
     input = gets.strip.downcase
     if input == "exit"
       ending
@@ -26,20 +26,28 @@ class StarWarsProject::CLI
       if num != 0
         char_input = StarWarsProject::Characters.find(num)
         character_details(char_input)
-        puts "would you like to see informatoin fror another character?"
+        puts "Would you like to see information on another character?"
         answer = gets.strip.downcase
         if answer == "yes" || answer == "y"
           menu
-        else
+        elsif answer == "no" || answer == "n"
         puts "------------------------------------------"
-        puts "Well I hope you learnd a thing or two ;D"
+        puts "Well I hope you learned a thing or two!"
         ending
         puts "------------------------------------------"
+        else
+          puts "-----------------------------------------------------------------------------"
+          puts "I'm afraid I am not familiar with that planet's language, taking you back to the menu."
+          puts "-----------------------------------------------------------------------------"
+          menu
       end
-      #add ending message
+
+    elsif
+      puts "The Force is not strong with this one.. Please start over."
     end
       #binding.pry
     end
+
   end
 
 
@@ -50,14 +58,14 @@ class StarWarsProject::CLI
   end
 
   def ending
-    puts "May the force be with you!"
+    puts "May the Force be with you!"
   end
 
   def welcoming
     puts "Hello! What is your name?"
     name = gets.chomp()
-    puts ("Hello " + name + ", are you ready to learn more about starwars?" )
-    puts "Well you're in the right place thats for that!"
+    puts ("Hello " + name + ", are you ready to learn more about Star Wars?" )
+    puts "A long time ago.. in a galaxy far far away... "
   end
 
   def character_details(char_input)
