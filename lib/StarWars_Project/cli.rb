@@ -12,17 +12,8 @@ class StarWarsProject::CLI
 
   def menu
     input = nil
-      while input != "exit"
-        puts "Characters:"
-        list_of_characters
-        puts " Type the Character you want to know more about."
-        puts " Oh and dont forget to type exit at any point to end the program"
-        input = gets.strip
-        case input
-        when "Luke Skywalker"
-
-        end
-      end
+    puts "Characters List:"
+    list_of_characters
   end
 
   def list_of_characters
