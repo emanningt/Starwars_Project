@@ -42,8 +42,9 @@ class StarWarsProject::CLI
           menu
       end
 
-    elsif
+    else
       puts "The Force is not strong with this one.. Please start over."
+      menu
     end
       #binding.pry
     end
