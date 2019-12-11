@@ -6,12 +6,11 @@ require "StarWars_Project/version"
 Gem::Specification.new do |spec|
   spec.name          = "StarWars_Project"
   spec.version       = StarWarsProject::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Eric Manning"]
+  spec.email         = ["emanningmusic@yahoo.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This is API allows a user to run and ratrieve a list of starwars characters and information about them}
+  spec.homepage      = "https://swapi.co/documentation#ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
