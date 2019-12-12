@@ -1,5 +1,5 @@
 #cli controler
-
+#class is my blue print
 class StarWarsProject::CLI
 
   def intro
@@ -19,11 +19,15 @@ class StarWarsProject::CLI
     puts "--------------------------------------------"
     puts "Type exit when you are done."
     input = gets.strip.downcase
-    if input == "exit"
+    if input.to_i > 10
+      puts "------------------------------------------------------"
+      puts "Sorry that number isnt on the list please chose again."
+      menu
+    elsif input == "exit"
       ending
     else
       num = input.to_i
-      if num != 0
+      if num!= 0
         char_input = StarWarsProject::Characters.find(num)
         character_details(char_input)
         puts "Would you like to see information on another character?"
