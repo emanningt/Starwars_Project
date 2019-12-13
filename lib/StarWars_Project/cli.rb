@@ -21,7 +21,7 @@ class StarWarsProject::CLI
     input = gets.strip.downcase
     if input.to_i > 10
       puts "------------------------------------------------------"
-      puts "Sorry that number isnt on the list please chose again."
+      puts "Sorry that number isn't on the list please choose again."
       menu
     elsif input == "exit"
       ending
